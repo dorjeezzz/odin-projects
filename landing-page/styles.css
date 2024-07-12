@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    position: sticky;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.headericon {
+    max-height: 100%;
+    width: 60px;
+    object-fit: cover;
+    margin-right: 0;
+}
+
+.leftheader {
+    display: flex;
+    /* gap: 10px; */
+}
+
+.headertext {
+    color: white;
+    margin: auto;
+    margin-left: 0px;
+}
+
+.header-links {
+    display: flex;
+    gap: 24px;
+    list-style-type: none;
+    margin-right: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: Optima;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.container {
+    /* padding-top: 50px; */
+    /* height: 50px; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    flex-grow: 1;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* gap: 200px; */
+}
+
+.section1 {
+    height: 600px;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url(./images/junwugif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-weight: 900;
+    align-items: flex-end;
+}
+
+.jinwu {
+    margin-bottom: auto;
+    height: 75px;
+    width: 100px;
+}
+
+.box1 {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background: rgb(172, 7, 227) no-repeat;
+    background-size: cover;
+    opacity: 70%;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px;
+}
+
+.box1 button {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    border: 3px solid purple;
+    border-radius: 3px;
+    padding: 3px 7px;
+    align-items: center;
+    margin: auto;
+}
+
+.section2 {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: blueviolet;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.outline {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #000;
+}
+
+.outline img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.shadow .tect {
+    text-align: center;
+    font-weight: 600;
+}
+
+.shadow h3 {
+    text-decoration: underline;
+}
+
+.section3 {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/jinwubk2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .tect3 {
+    width: 600px;
+    color: white;
+    font-family: cursive;
+}
+
+.section3 .box3 {
+    width: 600px;
+    margin-left: auto;
+    color: white;
+    margin-bottom: 0;
+}
+
+.box3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    align-self: flex-end;
+    font-family: "Marker Felt";
+}
+
+.section4 {
+    height: 375px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.container4 {
+    border-radius: 7px;
+    font-family: Roboto, sans-serif;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 125px;
+    background-color: #0787f8;
+    gap: 28px;
+}
+
+button.button4 {
+    /* align-self: flex-end; */
+    /* justify-self: flex-end; */
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px 20px;
+    background-color: #0787f8;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.text4 {
+    color: white;
+}
+
+.action {
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 19px;
+}
