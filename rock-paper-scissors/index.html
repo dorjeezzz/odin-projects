@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors Game (First to 5)</h1>
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissors">Scissors</button>
+        <div id="display">
+            <p id="gEvents"></p>
+            <p id="pscore"></p>
+            <p id="bscore"></p>
+            <p id="winner"></p>
+        </div>
+
+    </body>
+</html>
+
+<script>
+    // console.log("hello world");
+    const players = document.querySelector("#pscore");
+    const bots = document.querySelector("#bscore");
+    const b = document.querySelectorAll("button");
+    const gg = document.querySelector("#gEvents");
+    const w = document.querySelector("#winner");
+    let yourscore = 0;
+    let botscore = 0;
+    function random3(max){
+        return Math.floor(Math.random()*max);
+    }
+    function getComputerChoice(){
+        let num = random3(3);
+        if (num == 0){
+            return "Rock";
+        }
+        else if (num == 1) return "Paper";
+        else return "Scissors";
+    }
+    function playRound(playerSelection, computerSelection){
+        console.log(`Computer plays ${computerSelection}`);
+        let temp = playerSelection.toLowerCase();
+        let val = temp.charAt(0).toUpperCase()+temp.slice(1);
+        console.log(`You play ${val}`)
+        if (temp == "rock"){
+            if (computerSelection == "Rock") {
+                console.log("You tie! Rock vs Rock is a tie");
+                return 0;
+            }
+            else if (computerSelection == "Scissors") {
+                console.log(`You win! ${val} beats ${computerSelection}`);
+                return 1;
+            }
+            else{
+                console.log(`You lose! ${computerSelection} beats ${val}`);
+                return -1;
+            }
+        }
+        else if (temp == "paper"){
+            if (computerSelection == "Paper"){ 
+                console.log("You tie! Paper vs Paper is a tie");
+                return 0;
+        }
+            else if (computerSelection == "Rock"){ 
+                console.log(`You win! ${val} beats ${computerSelection}`);
+                return 1;
+            }
+            else {
+                console.log(`You lose! ${computerSelection} beats ${val}`);
+                return -1;
+        }
+        }
+        else {
+            if (computerSelection == "Scissors"){ 
+                console.log("You tie! Scissors vs Scissors is a tie");
+                return 0;
+            }
+            else if (computerSelection == "Paper"){
+                console.log(`You win! ${val} beats ${computerSelection}`);
+                return 1;
+            }
+            else{
+                console.log(`You lose! ${computerSelection} beats ${val}`);
+                return -1;
+            }
+        }
+    }
+    function playGame(){
+        let playr = 0, compt = 0;
+        let comp = getComputerChoice();
+        let player = prompt("What is your hand? (Please enter rock, paper, or scissors)");
+        let res = playRound(player, comp);
+        if (res == 1) playr++;
+        else if (res == -1) compt++;
+        else{
+            playr++;
+            compt++;
+        }
+        console.log(playr);
+        if (playr > compt) console.log("You win! You beat the computer");
+        else console.log("Computer beat you! Better luck next time");
+    }
+    b.forEach((button) => {
+        button.addEventListener("click", ()=>{
+            let curr = getComputerChoice();
+            let move = button.id;
+            let res = playRound(move, curr);
+            let disp = "";
+            if (res == 1){ 
+                yourscore += 1;
+                disp = "This round's a win!";
+            }
+            else if (res == -1){ 
+                botscore += 1;
+                disp = "This round's a loss!";
+            }
+            else disp = "Tie round, try again!";
+            gEvents.textContent = `You play ${button.id}, computer plays ${curr}. ${disp}`;
+            players.textContent = `Your score is: ${yourscore}`;
+            bots.textContent = `Opponent score is: ${botscore}`;
+            if (botscore == 5){
+                w.textContent = "Game over! You lost to the computer L";
+                botscore = 0;
+                yourscore = 0;
+            }
+            if (yourscore == 5){
+                w.textContent = "Game over! Congrats on beating the computer";
+                botscore = 0;
+                yourscore = 0;
+            }
+        });
+    });
+    // players.textContent = `Your score is: ${yourscore}`;
+    // bots.textContent = `Opponent score is: ${botscore}`;
+    console.log("Branch test");
+</script>
