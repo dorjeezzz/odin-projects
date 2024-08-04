@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
+    <div class="header">Library</div>
+    <div class="below">Add books read below. Changes are stored locally</div>
+    <div class="container">
+        <form action="" method="post" id="input">
+            <label for="bookname">Book Name:
+                <input type="text" id="bookname" value="" name="book_name" required>
+            </label>
+            <label for="authorname">Author:
+                <input type="text" id="authorname" name="author_name" value="" required>
+            </label>
+            <label for="pages">Pages:
+                <input type="number" id="pages" name="page_no" value="" required>
+            </label>
+            <label for="read">Read?
+                <input type="checkbox" id="read" name="read" value="read">
+            </label>
+        </form>
+    </div>
+    <div class="footer">Footer</div>
 </body>
 </html>
