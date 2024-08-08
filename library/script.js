@@ -7,6 +7,14 @@ function Book(name, author, pages, read){
     this.read = read;
 }
 
-function addBookToLibrary(book){
-    library.push(book);
-}
+const button = document.querySelector("#pressed");
+
+button.addEventListener("click", (e)=>{
+    const el = document.createElement("div");
+    let name = document.querySelector("#bookname");
+    let title=name.textContent;
+    let author = document.querySelector("#authorname");
+    let number = document.querySelector("#pages");
+    let read = document.querySelector("#read");
+
+});

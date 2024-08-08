@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+.header{
+    background-color: rgb(0, 157, 255);
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 1px solid black;
+}
+.inputs{
+    height: 10vh;
+    background-color: rgb(0,157,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    background-color: lightgray;
+}
+
+.cardcontainer{
+    border: 1px solid black;
+    display: grid;
+    width: 100%;
+    height: 90%;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 1px 3px 4px -2px lightgray;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 4rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    border: 1px solid black;
+    /* justify-content: center; */
+    align-items: center;
+
+}
