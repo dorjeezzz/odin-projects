@@ -7,14 +7,20 @@ function Book(name, author, pages, read){
     this.read = read;
 }
 
+function addBookToLibrary(name, author, pages, read){
+    const bk = new Book(name, author, pages, read);
+    library.push(bk);
+}
+
+const container = document.querySelector(".cardcontainer");
+
 const button = document.querySelector("#pressed");
 
 button.addEventListener("click", (e)=>{
-    const el = document.createElement("div");
-    let name = document.querySelector("#bookname");
-    let title=name.textContent;
-    let author = document.querySelector("#authorname");
-    let number = document.querySelector("#pages");
-    let read = document.querySelector("#read");
-
+    let title = document.querySelector("#bookname").value;
+    let author = document.querySelector("#author_name").value;
+    let pgno = document.querySelector("#page_no").value;
+    let read = document.querySelector("#read").value;
+    addBookToLibrary(title,author,pgno,read);
+    
 });
