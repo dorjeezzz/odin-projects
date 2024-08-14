@@ -22,6 +22,11 @@ function del(index){
     library.splice(1,index);
 }
 
+function changeread(index){
+    if (library[index].read) library[index].read = false;
+    else library[index].read = true;
+}
+
 button.addEventListener("click", (e)=>{
     let title = document.querySelector("#bookname").value;
     let author = document.querySelector("#authorname").value;
@@ -43,7 +48,7 @@ button.addEventListener("click", (e)=>{
             <p>Pages: ${bk.pages}</p>
             <p>${variable_name}</p>
             <button onclick="del(${idx})">Remove</button>
-            <button><button>`
+            <button onclick="changeread(${idx})">Read<button>`
         container.appendChild(book);
     });
     container.appendChild(div);
